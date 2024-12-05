@@ -1,4 +1,5 @@
-title,type,vibe,imdb_link,play_link,image_url,image_path
-The Big Short,movie,finance,"https://www.imdb.com/title/tt1596363/","#","https://image-url.com/the-big-short.jpg","assets/images/The_Big_Short.jpg"
-Lie to Me,tv show,detective,"https://www.imdb.com/title/tt1235099/","#","https://image-url.com/lie-to-me.jpg","assets/images/Lie_to_Me.jpg"
-Knives Out,movie,mystery,"https://www.imdb.com/title/tt8946378/","#","https://image-url.com/knives-out.jpg","assets/images/Knives_Out.jpg"
+title,type,vibe,imdb_link,play_link,image_url
+The Big Short,movie,finance,https://www.imdb.com/title/tt1596363/,https://example.com/play-link,https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTU4Ml5BMl5BanBnXkFtZTcwODY3OTUyMw@@._V1_SX300.jpg
+Lie to Me,tv show,detective,https://www.imdb.com/title/tt1235099/,https://example.com/play-link,https://m.media-amazon.com/images/M/MV5BMTk1NzY4NjgzOV5BMl5BanBnXkFtZTcwNjUyMDg5Mw@@._V1_SX300.jpg
+Knives Out,movie,mystery,https://www.imdb.com/title/tt8946378/,https://example.com/play-link,https://m.media-amazon.com/images/M/MV5BMmVmZDE3OTktOTUyOS00ZWM4LWEzZjQtNTM5NTcyMzU2MmQ2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg
+House, M.D.,tv show,medical,https://www.imdb.com/title/tt0412142/,https://example.com/play-link,https://m.media-amazon.com/images/M/MV5BMjM4OTgzMjYxNl5BMl5BanBnXkFtZTcwOTQ5NDk0MQ@@._V1_SX300.jpg

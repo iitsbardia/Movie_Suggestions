@@ -1,56 +1,66 @@
-// Read CSV and render movies
-async function loadMovies() {
-  const response = await fetch('./data/movies.csv');
-  const data = await response.text();
+// Reference the poster gallery container
+const gallery = document.getElementById("poster-gallery");
 
-  // Parse CSV data
-  const rows = data.split('\n').slice(1); // Remove header
-  const movies = rows.map(row => {
-      const [title, type, vibe, imdbLink, playLink, imageUrl] = row.split(',');
-      return { title, type, vibe, imdbLink, playLink, imageUrl: imageUrl || 'https://via.placeholder.com/300x450?text=No+Image' };
-  });
+// Path to the CSV file
+const csvFilePath = "data/movies_list.csv";
 
-  // Group movies by vibe
-  const groupedMovies = groupBy(movies, 'vibe');
+// Function to parse CSV into an array of objects
+function parseCSV(text) {
+    const rows = text.split("\n").slice(1); // Skip the header row
+    return rows
+        .map(row => {
+            const columns = row.split(",");
+            if (columns.length < 3) {
+                console.warn(`Skipping malformed row: ${row}`);
+                return null;
+            }
 
-  // Render playlists
-  const container = document.getElementById('playlist-container');
-  container.innerHTML = ''; // Clear the "Loading..." message
+            const [title, type, vibe] = columns;
+            if (!title || !type || !vibe) {
+                console.warn(`Skipping incomplete row: ${row}`);
+                return null;
+            }
 
-  Object.keys(groupedMovies).forEach(vibe => {
-      const playlist = document.createElement('div');
-      playlist.classList.add('playlist');
-
-      const header = document.createElement('h2');
-      header.textContent = `${vibe} Vibes`;
-      playlist.appendChild(header);
-
-      groupedMovies[vibe].forEach(movie => {
-          const movieBox = document.createElement('div');
-          movieBox.classList.add('movie-box');
-
-          movieBox.innerHTML = `
-              <img src="${movie.imageUrl}" alt="${movie.title}">
-              <h2>${movie.title}</h2>
-              <p>${movie.type}</p>
-              <a href="${movie.imdbLink}" target="_blank" class="imdb-link">View on IMDb</a>
-              <a href="${movie.playLink}" target="_blank" class="play-link">Play Online</a>
-          `;
-
-          playlist.appendChild(movieBox);
-      });
-
-      container.appendChild(playlist);
-  });
+            return {
+                title: title.trim(),
+                type: type.trim(),
+                vibe: vibe.trim(),
+            };
+        })
+        .filter(movie => movie); // Remove null values
 }
 
-// Utility to group by a key
-function groupBy(array, key) {
-  return array.reduce((result, currentValue) => {
-      (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
-      return result;
-  }, {});
+// Function to generate poster gallery
+function generateGallery(movies) {
+    movies.forEach((poster) => {
+        const posterPath = `assets/posters/${poster.type}/${poster.vibe}/${poster.title.replace(/ /g, "_")}.jpg`;
+
+        // Create the image element
+        const img = document.createElement("img");
+        img.src = posterPath;
+        img.alt = poster.title;
+
+        // Add a fallback event in case the poster is missing
+        img.onerror = () => {
+            img.src = "assets/default.jpg"; // Path to a default placeholder image
+            img.alt = "Poster not found";
+        };
+
+        // Append the image to the gallery
+        gallery.appendChild(img);
+    });
 }
 
-// Load movies on page load
-loadMovies();
+// Fetch and process the CSV
+fetch(csvFilePath)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(text => {
+        const movies = parseCSV(text);
+        generateGallery(movies);
+    })
+    .catch(error => console.error("Error loading CSV:", error));
