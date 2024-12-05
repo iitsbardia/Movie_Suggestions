@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must-Watch Posters</title>
+    <title>Bardis List</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Must-Watch Posters</h1>
+        <h1>Movie Suggestion</h1>
+        <div class="filters">
+            <label for="filter-type">Filter by Type:</label>
+            <select id="filter-type">
+                <option value="all">All</option>
+                <option value="movie">Movies</option>
+                <option value="tv show">TV Shows</option>
+            </select>
+        </div>
     </header>
+    
     <main id="poster-gallery">
-        <!-- Posters will be dynamically added here -->
+        <!-- Posters will be dynamically loaded here -->
     </main>
     <footer>
-        <p>&copy; 2024 Your Name | Movie Suggestions</p>
+        <p>&copy; 2024 Movie Gallery</p>
     </footer>
     <script src="scripts/app.js"></script>
 </body>

@@ -15,40 +15,61 @@ function parseCSV(text) {
                 return null;
             }
 
-            const [title, type, vibe] = columns;
+            const [title, type, vibe] = columns.map(col => col.trim());
             if (!title || !type || !vibe) {
                 console.warn(`Skipping incomplete row: ${row}`);
                 return null;
             }
 
-            return {
-                title: title.trim(),
-                type: type.trim(),
-                vibe: vibe.trim(),
-            };
+            return { title, type, vibe };
         })
         .filter(movie => movie); // Remove null values
 }
 
 // Function to generate poster gallery
 function generateGallery(movies) {
-    movies.forEach((poster) => {
+    gallery.innerHTML = ""; // Clear previous content
+    movies.forEach(poster => {
         const posterPath = `assets/posters/${poster.type}/${poster.vibe}/${poster.title.replace(/ /g, "_")}.jpg`;
+
+        // Create a wrapper div for the poster
+        const posterDiv = document.createElement("div");
+        posterDiv.className = "poster";
 
         // Create the image element
         const img = document.createElement("img");
         img.src = posterPath;
         img.alt = poster.title;
+        img.loading = "lazy"; // Enable lazy loading
 
         // Add a fallback event in case the poster is missing
         img.onerror = () => {
-            img.src = "assets/default.jpg"; // Path to a default placeholder image
-            img.alt = "Poster not found";
+            img.src = "assets/placeholder.jpg"; // Fallback image
+            img.alt = "Image not available";
         };
 
-        // Append the image to the gallery
-        gallery.appendChild(img);
+        // Add a title caption
+        const caption = document.createElement("p");
+        caption.textContent = poster.title;
+
+        // Append elements to the posterDiv
+        posterDiv.appendChild(img);
+        posterDiv.appendChild(caption);
+
+        // Append the posterDiv to the gallery
+        gallery.appendChild(posterDiv);
     });
+}
+
+// Function to filter movies by dropdown value
+function filterByDropdown(movies) {
+    const filterValue = document.getElementById("filter-type").value;
+
+    // If "all" is selected, return all movies
+    if (filterValue === "all") return movies;
+
+    // Return filtered movies based on the dropdown value
+    return movies.filter(movie => movie.type.toLowerCase() === filterValue);
 }
 
 // Fetch and process the CSV
@@ -61,6 +82,15 @@ fetch(csvFilePath)
     })
     .then(text => {
         const movies = parseCSV(text);
+
+        // Generate initial gallery
         generateGallery(movies);
+
+        // Set up dropdown filter functionality
+        const dropdown = document.getElementById("filter-type");
+        dropdown.addEventListener("change", () => {
+            const filteredMovies = filterByDropdown(movies);
+            generateGallery(filteredMovies);
+        });
     })
     .catch(error => console.error("Error loading CSV:", error));
