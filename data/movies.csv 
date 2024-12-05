@@ -1,0 +1,4 @@
+title,type,vibe,imdb_link,play_link,image_url,image_path
+The Big Short,movie,finance,"https://www.imdb.com/title/tt1596363/","#","https://image-url.com/the-big-short.jpg","assets/images/The_Big_Short.jpg"
+Lie to Me,tv show,detective,"https://www.imdb.com/title/tt1235099/","#","https://image-url.com/lie-to-me.jpg","assets/images/Lie_to_Me.jpg"
+Knives Out,movie,mystery,"https://www.imdb.com/title/tt8946378/","#","https://image-url.com/knives-out.jpg","assets/images/Knives_Out.jpg"

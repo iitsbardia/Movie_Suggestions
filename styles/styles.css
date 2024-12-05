@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+#playlist-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie-box h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.movie-box p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.imdb-link,
+.play-link {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.imdb-link {
+  background-color: #f5c518;
+  color: #000;
+}
+
+.play-link {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.imdb-link:hover {
+  background-color: #e4b411;
+}
+
+.play-link:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.movie-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.movie-box img {
+  width: 100%; /* Adjust to fit the movie box width */
+  max-width: 300px; /* Prevent images from being too large */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fills the box without distortion */
+  border-radius: 5px;
+  margin: 0 auto 1rem; /* Center image and add spacing below */
+  display: block;
+}
+
+.movie-box img {
+  width: 200px;
+  height: 300px; /* Consistent aspect ratio */
+  object-fit: cover; /* Crop the image to fit the box */
+  border-radius: 5px;
+  margin: 0 auto 1rem; /* Center the image */
+  display: block;
+}
+
