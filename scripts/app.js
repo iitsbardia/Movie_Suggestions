@@ -1,5 +1,5 @@
 // Path to the CSV file
-const csvFilePath = "data/movies_list.csv";
+const csvFilePath = "./data/movies_list.csv";
 
 // IMDb logo URL
 const imdbLogoUrl = "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg";
