@@ -9,6 +9,16 @@ Boiler Room,Movie,Finance/Gambling
 Casino,Movie,Finance/Gambling
 Molly's Game,Movie,Finance/Gambling
 Succession,TV Show,Finance/Gambling
+Ocean's Eleven,Movie,Finance/Gambling
+Ocean's Twelve,Movie,Finance/Gambling
+Ocean's Thirteen,Movie,Finance/Gambling
+Moneyball,Movie,Finance/Gambling
+The Social Network,Movie,Finance/Gambling
+The Founder,Movie,Finance/Gambling
+American Hustle,Movie,Finance/Gambling
+Catch Me If You Can,Movie,Finance/Gambling
+The Gambler,Movie,Finance/Gambling
+Wall Street,Movie,Finance/Gambling
 Law and Order: SVU,TV Show,Detective/Crime
 The Rookie,TV Show,Detective/Crime
 Lucifer,TV Show,Detective/Crime
@@ -18,16 +28,57 @@ Mindhunter,TV Show,Detective/Crime
 The Mentalist,TV Show,Detective/Crime
 Castle,TV Show,Detective/Crime
 Dexter,TV Show,Detective/Crime
+Sherlock,TV Show,Detective/Crime
+Elementary,TV Show,Detective/Crime
+Broadchurch,TV Show,Detective/Crime
+The Killing,TV Show,Detective/Crime
+Fargo,TV Show,Detective/Crime
+Narcos,TV Show,Detective/Crime
+Narcos: Mexico,TV Show,Detective/Crime
+Bosch,TV Show,Detective/Crime
+True Detective,TV Show,Detective/Crime
+Mare of Easttown,TV Show,Detective/Crime
+Unbelievable,TV Show,Detective/Crime
 The Blacklist,TV Show,Espionage
 The Americans,TV Show,Espionage
 Homeland,TV Show,Espionage
 Bodyguard,TV Show,Espionage
 Tinker Tailor Soldier Spy,Movie,Espionage
+Bridge of Spies,Movie,Espionage
+Zero Dark Thirty,Movie,Espionage
+Argo,Movie,Espionage
+The Spy,TV Show,Espionage
+Jack Ryan,TV Show,Espionage
+Mission: Impossible,Movie,Espionage
+Mission: Impossible II,Movie,Espionage
+Mission: Impossible III,Movie,Espionage
+Mission: Impossible - Ghost Protocol,Movie,Espionage
+Mission: Impossible - Rogue Nation,Movie,Espionage
+Mission: Impossible - Fallout,Movie,Espionage
+Kingsman: The Secret Service,Movie,Espionage
+Kingsman: The Golden Circle,Movie,Espionage
+The Night Manager,TV Show,Espionage
+The Recruit,TV Show,Espionage
 Suits,TV Show,Legal
 The Lincoln Lawyer,Movie,Legal
 Boston Legal,TV Show,Legal
 The Good Wife,TV Show,Legal
 Damages,TV Show,Legal
+The Good Fight,TV Show,Legal
+The Judge,Movie,Legal
+Michael Clayton,Movie,Legal
+Just Mercy,Movie,Legal
+A Few Good Men,Movie,Legal
+Primal Fear,Movie,Legal
+The Firm,Movie,Legal
+Runaway Jury,Movie,Legal
+A Time to Kill,Movie,Legal
+My Cousin Vinny,Movie,Legal
+Anatomy of a Murder,Movie,Legal
+The Paper Chase,Movie,Legal
+Law Abiding Citizen,Movie,Legal
+Dark Waters,Movie,Legal
+Witness for the Prosecution,Movie,Legal
 Friends,TV Show,Comedy
 The Office,TV Show,Comedy
 Brooklyn Nine-Nine,TV Show,Comedy
@@ -35,6 +86,19 @@ How I Met Your Mother,TV Show,Comedy
 The Big Bang Theory,TV Show,Comedy
 The Hangover,Movie,Comedy
 Horrible Bosses,Movie,Comedy
+Parks and Recreation,TV Show,Comedy
+Veep,TV Show,Comedy
+Ted,Movie,Comedy
+Superbad,Movie,Comedy
+Crazy, Stupid, Love,Movie,Comedy
+The 40-Year-Old Virgin,Movie,Comedy
+This Is the End,Movie,Comedy
+Knocked Up,Movie,Comedy
+Forgetting Sarah Marshall,Movie,Comedy
+Step Brothers,Movie,Comedy
+Zombieland,Movie,Comedy
+Deadpool,Movie,Comedy
+Deadpool 2,Movie,Comedy
 Game of Thrones,TV Show,Drama
 Breaking Bad,TV Show,Drama
 Better Call Saul,TV Show,Drama
@@ -42,16 +106,19 @@ The Sopranos,TV Show,Drama
 Chernobyl,TV Show,Drama
 The Irishman,Movie,Drama
 The Departed,Movie,Drama
-Fight Club,Movie,Movies (Drama/Thriller)
-The Shawshank Redemption,Movie,Movies (Drama/Thriller)
-Inception,Movie,Movies (Drama/Thriller)
-Memento,Movie,Movies (Drama/Thriller)
-The Prestige,Movie,Movies (Drama/Thriller)
-Parasite,Movie,Movies (Drama/Thriller)
-Pulp Fiction,Movie,Movies (Drama/Thriller)
-Goodfellas,Movie,Movies (Drama/Thriller)
-Django Unchained,Movie,Movies (Drama/Thriller)
-Once Upon a Time in Hollywood,Movie,Movies (Drama/Thriller)
+The Crown,TV Show,Drama
+House of Cards,TV Show,Drama
+The West Wing,TV Show,Drama
+Mad Men,TV Show,Drama
+Boardwalk Empire,TV Show,Drama
+Ozark,TV Show,Drama
+Yellowstone,TV Show,Drama
+The White Lotus,TV Show,Drama
+Big Little Lies,TV Show,Drama
+Succession,TV Show,Drama
+The Morning Show,TV Show,Drama
+The Handmaid's Tale,TV Show,Drama
+The Last of Us,TV Show,Drama
 Family Guy,TV Show,Animated/Anime
 Rick and Morty,TV Show,Animated/Anime
 American Dad,TV Show,Animated/Anime
@@ -61,3 +128,12 @@ Attack on Titan,Anime,Animated/Anime
 BoJack Horseman,TV Show,Animated/Anime
 One Punch Man,Anime,Animated/Anime
 Fullmetal Alchemist: Brotherhood,Anime,Animated/Anime
+Naruto,Anime,Animated/Anime
+Naruto: Shippuden,Anime,Animated/Anime
+Demon Slayer,Anime,Animated/Anime
+One Piece,Anime,Animated/Anime
+Bleach,Anime,Animated/Anime
+Hunter x Hunter,Anime,Animated/Anime
+Dragon Ball Z,Anime,Animated/Anime
+Dragon Ball Super,Anime,Animated/Anime
+Ca

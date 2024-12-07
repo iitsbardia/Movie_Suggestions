@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bardis List</title>
+    <title>Movie Gallery</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Movie Suggestion</h1>
-        <div class="filters">
-            <label for="filter-type">Filter by Type:</label>
-            <select id="filter-type">
-                <option value="all">All</option>
-                <option value="movie">Movies</option>
-                <option value="tv show">TV Shows</option>
+        <h1>Movie and TV Show Gallery</h1>
+        <div class="controls">
+            <label for="filter-select">Filter by:</label>
+            <select id="filter-select">
+                <option value="All">All</option>
+                <option value="Movie">Movies</option>
+                <option value="TV Show">TV Shows</option>
             </select>
+    
+            <label for="sort-select">Sort by IMDb:</label>
+            <select id="sort-select">
+                <option value="random">Random</option>
+                <option value="imdb">IMDb Score</option>
+                <option value="release">Release Date</option>
+            </select>
+            
         </div>
     </header>
     
-    <main id="poster-gallery">
-        <!-- Posters will be dynamically loaded here -->
+    <main>
+        <section id="poster-gallery">
+            <!-- Dynamic content will be added here -->
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Movie Gallery</p>
+        <p>&copy; 2024 Movie Gallery. All Rights Reserved.</p>
     </footer>
     <script src="scripts/app.js"></script>
 </body>
